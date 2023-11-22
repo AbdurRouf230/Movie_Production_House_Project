@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="869.0" style="-fx-background-color: lavender;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginproject.NewAccountOpenerController">
+   <children>
+      <TextField fx:id="nameFiled" layoutX="149.0" layoutY="65.0" promptText="nameField" />
+      <Text layoutX="34.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name:" wrappingWidth="102.13671875" />
+      <TextField fx:id="idFiled" layoutX="150.0" layoutY="102.0" promptText="Only Integer" />
+      <Text layoutX="34.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Id:" wrappingWidth="102.13671875" />
+      <TextField fx:id="passField" layoutX="149.0" layoutY="148.0" prefHeight="25.0" prefWidth="203.0" />
+      <Text layoutX="34.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter A Password" wrappingWidth="102.13671875" />
+      <Button layoutX="34.0" layoutY="186.0" mnemonicParsing="false" onAction="#addCrewAction" prefHeight="43.0" prefWidth="322.0" text="Add Crew" />
+      <TextArea fx:id="resultBar" editable="false" layoutX="37.0" layoutY="238.0" prefHeight="72.0" prefWidth="828.0" style="-fx-background-color: cyan;" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font></TextArea>
+      <ComboBox fx:id="desigCombo" layoutX="335.0" layoutY="63.0" prefWidth="150.0" promptText="Designation" />
+      <Button layoutX="23.0" layoutY="643.0" mnemonicParsing="false" onAction="#logInPageAction" prefHeight="25.0" prefWidth="322.0" text="Go to log in  page" />
+      <TableView fx:id="crewTable" layoutX="34.0" layoutY="319.0" prefHeight="266.0" prefWidth="828.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="140.0" text="Name " />
+          <TableColumn fx:id="idCol" prefWidth="129.0" text="Id" />
+            <TableColumn fx:id="desigCol" prefWidth="164.0" text="Designation" />
+            <TableColumn fx:id="dojCol" prefWidth="172.0" text="Join Date" />
+            <TableColumn fx:id="passCol" prefWidth="222.0" text="Password" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="doj" layoutX="451.0" layoutY="102.0" />
+      <Text layoutX="335.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Join Date" wrappingWidth="102.13671875" />
+      <Button layoutX="669.0" layoutY="29.0" mnemonicParsing="false" onAction="#createTheTeam" prefHeight="185.0" prefWidth="174.0" text="Create The Team" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="movieName" layoutX="243.0" layoutY="17.0" prefHeight="36.0" prefWidth="338.0" promptText="Enter The Movie name ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
